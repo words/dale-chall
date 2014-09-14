@@ -1,0 +1,44 @@
+{
+  "name": "dale-chall",
+  "version": "0.0.1",
+  "description": "List of familiar American-English words: The New Dale-Chall (1995)",
+  "license": "MIT",
+  "keywords": [
+    "dale",
+    "chall",
+    "word",
+    "list"
+  ],
+  "dependencies": {
+    "datalist-interface": "0.0.1"
+  },
+  "author": "Titus Wormer <tituswormer@gmail.com>",
+  "devDependencies": {
+    "eslint": "^0.8.0",
+    "istanbul": "^0.3.0",
+    "jscs": "^1.5.0",
+    "mocha": "^1.20.0",
+    "plain-text-data-to-json": "^0.1.0",
+    "scraperjs": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/dale-chall.git"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/_mocha --reporter spec --check-leaks -u exports spec/dale-chall.spec.js",
+    "test-travis": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- --reporter spec --check-leaks -u exports spec/dale-chall.spec.js",
+    "lint": "npm run lint-api && npm run lint-test && npm run lint-style",
+    "lint-api": "node_modules/.bin/eslint index.js scrape-data.js build-data.js build-supported-words.js --env node --env browser --rule 'quotes: [2, single]'",
+    "lint-test": "node_modules/.bin/eslint spec/dale-chall.spec.js --env node --env mocha --rule 'quotes: [2, single]'",
+    "lint-style": "node_modules/.bin/jscs index.js scrape-data.js build-data.js build-supported-words.js spec/dale-chall.spec.js --reporter=inline",
+    "install-browser-test": "npm install browserify",
+    "scrape-data": "node scrape-data.js",
+    "build-data": "node build-data.js",
+    "build-supported-words": "node build-supported-words.js",
+    "build-browser-test": "node_modules/.bin/browserify spec/dale-chall.spec.js -o spec/browser.spec.js",
+    "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -- spec/dale-chall.spec.js",
+    "prepublish": "npm run scrape-data && npm run build-data && npm run build-supported-words",
+    "make": "npm run lint && npm run coverage"
+  }
+}

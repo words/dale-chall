@@ -1,0 +1,32 @@
+{
+  "name": "dale-chall",
+  "main": "index.js",
+  "description": "List of familiar American-English words: The New Dale-Chall (1995)",
+  "license": "MIT",
+  "keywords": [
+    "dale",
+    "chall",
+    "word",
+    "list"
+  ],
+  "dependencies": {
+    "datalist-interface": "~0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/dale-chall.git"
+  },
+  "authors": [
+    "Titus Wormer <tituswormer@gmail.com>"
+  ],
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "component.json",
+    "package.json",
+    "coverage",
+    "node_modules",
+    "spec"
+  ]
+}

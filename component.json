@@ -1,0 +1,22 @@
+{
+  "name": "dale-chall",
+  "version": "0.0.1",
+  "description": "List of familiar American-English words: The New Dale-Chall (1995)",
+  "license": "MIT",
+  "keywords": [
+    "dale",
+    "chall",
+    "word",
+    "list"
+  ],
+  "dependencies": {
+    "wooorm/datalist-interface": "~0.0.1"
+  }
+  "repository": "wooorm/dale-chall",
+  "scripts": [
+    "index.js"
+  ],
+  "json": [
+    "data/dale-chall.json"
+  ]
+}
