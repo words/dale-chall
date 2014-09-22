@@ -42,6 +42,11 @@ See [the **datalist-interface** API](https://github.com/wooorm/datalist-interfac
 
 See [Supported-words.md](Supported-words.md).
 
+## Related
+
+- [spache](https://github.com/wooorm/spache) — Another list of familiar words;
+- [dale-chall-formula](https://github.com/wooorm/dale-chall-formula) — Formula to detect the reading level, using this list.
+
 ## License
 
 MIT © Titus Wormer
