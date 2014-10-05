@@ -10,7 +10,7 @@
     "list"
   ],
   "dependencies": {
-    "datalist-interface": "~0.0.1"
+    "datalist-interface": "^0.0.1"
   },
   "repository": {
     "type": "git",
