@@ -30,6 +30,7 @@
     "coverage",
     "node_modules",
     "data/dale-chall.txt",
+    "script",
     "spec"
   ]
 }
