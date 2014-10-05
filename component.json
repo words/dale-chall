@@ -10,8 +10,8 @@
     "list"
   ],
   "dependencies": {
-    "wooorm/datalist-interface": "~0.0.1"
-  }
+    "wooorm/datalist-interface": "0.0.1"
+  },
   "repository": "wooorm/dale-chall",
   "scripts": [
     "index.js"
