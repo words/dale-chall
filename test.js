@@ -2,7 +2,7 @@
 
 var spache, assert;
 
-spache = require('..');
+spache = require('./');
 assert = require('assert');
 
 describe('spache', function () {
