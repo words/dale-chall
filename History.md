@@ -1,4 +1,16 @@
 
+n.n.n / 2014-10-19
+==================
+
+ * Update .npmignore, bower ignore
+ * Update Readme.md
+ * Refactor tests
+ * Refactor index.js
+ * Move `build-supported-words.js` to `build-support.js`
+ * Move `spec/` to `test.js`
+ * Update datalist-interface
+ * Update .gitignore, .npmignore, bower ignore
+
 0.1.0 / 2014-10-05
 ==================
 
