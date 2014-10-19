@@ -23,14 +23,13 @@
     ".*",
     "*.log",
     "*.md",
-    "components",
-    "build",
+    "build/",
+    "components/",
+    "coverage/",
+    "node_modules/",
+    "spec/",
+    "benchmark.js",
     "component.json",
-    "package.json",
-    "coverage",
-    "node_modules",
-    "data/dale-chall.txt",
-    "script",
-    "spec"
+    "package.json"
   ]
 }
