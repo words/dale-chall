@@ -27,11 +27,9 @@ var daleChall = require('dale-chall');
 daleChall.is('train'); // true
 daleChall.is('unicorn'); // false
 
-daleChall.add('unicorn');
-daleChall.is('unicorn'); // true
+daleChall.add('unicorn').is('unicorn'); // true
 
-daleChall.remove('unicorn');
-daleChall.is('unicorn'); // false
+daleChall.remove('unicorn').is('unicorn'); // false
 ```
 
 ## API
