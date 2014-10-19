@@ -10,3 +10,5 @@ benchmark.js
 bower.json
 component.json
 History.md
+Supported-words.md
+data/buzzwords.txt

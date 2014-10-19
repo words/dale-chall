@@ -30,6 +30,7 @@
     "test.js",
     "benchmark.js",
     "component.json",
-    "package.json"
+    "package.json",
+    "data/buzzwords.txt"
   ]
 }
