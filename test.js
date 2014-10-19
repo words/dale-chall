@@ -1,28 +1,39 @@
 'use strict';
 
-var spache, assert;
+/**
+ * Dependencies.
+ */
 
-spache = require('./');
+var daleChall,
+    assert;
+
+daleChall = require('./');
 assert = require('assert');
 
-describe('spache', function () {
+/**
+ * Tests.
+ */
+
+describe('daleChall', function () {
     it('should be an `Object`', function () {
-        assert(typeof spache === 'object');
+        assert(typeof daleChall === 'object');
     });
 });
 
-describe('spache.is(word)', function () {
-    it('should return true if a word is listed in Spache', function () {
-        assert(spache.is('old-fashioned') === true);
+describe('daleChall.is(word)', function () {
+    it('should return true if a word is listed', function () {
+        assert(daleChall.is('old-fashioned') === true);
     });
 
-    it('should return false if a word is not listed in Spache', function () {
-        assert(spache.is('unicorn') === false);
+    it('should return false if a word is not listed', function () {
+        assert(daleChall.is('unicorn') === false);
     });
 });
 
-describe('spache.all()', function () {
-    var all = spache.all();
+describe('daleChall.all()', function () {
+    var all;
+
+    all = daleChall.all();
 
     it('should return an array', function () {
         assert('length' in all);
@@ -30,60 +41,60 @@ describe('spache.all()', function () {
     });
 
     it('every entry should be lowercase', function () {
-        var iterator = -1,
-            length = all.length;
-
-        while (++iterator < length) {
-            assert(all[iterator].toLowerCase() === all[iterator]);
-        }
+        all.forEach(function (word) {
+            assert(word.toLowerCase() === word);
+        });
     });
 
     it('every entry should only occur once', function () {
-        var iterator = -1,
-            length = all.length;
-
-        while (++iterator < length) {
-            assert(all.indexOf(all[iterator], iterator + 1) === -1);
-        }
+        all.forEach(function (word, index) {
+            assert(all.indexOf(word, index + 1) === -1);
+        });
     });
 
     it('should be immutable', function () {
         all.push('unicorn');
 
-        assert(spache.all().indexOf('unicorn') === -1);
+        assert(daleChall.all().indexOf('unicorn') === -1);
     });
 });
 
-describe('spache.add(word) and spache.remove(word)',
+describe('daleChall.add(word) and daleChall.remove(word)',
     function () {
         it('should add and remove a word', function () {
-            assert(spache.is('unicorn') === false);
+            assert(daleChall.is('unicorn') === false);
 
-            spache.add('unicorn');
-            assert(spache.is('unicorn') === true);
+            daleChall.add('unicorn');
 
-            spache.remove('unicorn');
-            assert(spache.is('unicorn') === false);
+            assert(daleChall.is('unicorn') === true);
+
+            daleChall.remove('unicorn');
+
+            assert(daleChall.is('unicorn') === false);
         });
 
         it('should add and remove multiple words', function () {
-            assert(spache.is('unicorn') === false);
-            assert(spache.is('robot') === false);
+            assert(daleChall.is('unicorn') === false);
+            assert(daleChall.is('robot') === false);
 
-            spache.add('unicorn', 'robot');
-            assert(spache.is('unicorn') === true);
-            assert(spache.is('robot') === true);
+            daleChall.add('unicorn', 'robot');
 
-            spache.remove('unicorn', 'robot');
-            assert(spache.is('unicorn') === false);
-            assert(spache.is('robot') === false);
+            assert(daleChall.is('unicorn') === true);
+            assert(daleChall.is('robot') === true);
+
+            daleChall.remove('unicorn', 'robot');
+
+            assert(daleChall.is('unicorn') === false);
+            assert(daleChall.is('robot') === false);
         });
 
         it('should fail silently when removing a non-existing word',
             function () {
-                assert(spache.is('unicorn') === false);
-                spache.remove('unicorn');
-                assert(spache.is('unicorn') === false);
+                assert(daleChall.is('unicorn') === false);
+
+                daleChall.remove('unicorn');
+
+                assert(daleChall.is('unicorn') === false);
             }
         );
     }
