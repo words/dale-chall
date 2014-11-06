@@ -1,4 +1,4 @@
-# dale-chall [![Build Status](https://travis-ci.org/wooorm/dale-chall.svg?branch=master)](https://travis-ci.org/wooorm/dale-chall) [![Coverage Status](https://img.shields.io/coveralls/wooorm/dale-chall.svg)](https://coveralls.io/r/wooorm/dale-chall?branch=master)
+# dale-chall [![Build Status](https://img.shields.io/travis/wooorm/dale-chall.svg?style=flat)](https://travis-ci.org/wooorm/dale-chall) [![Coverage Status](https://img.shields.io/coveralls/wooorm/dale-chall.svg?style=flat)](https://coveralls.io/r/wooorm/dale-chall?branch=master)
 
 List of familiar American-English words: [The New Dale-Chall (1995)](http://en.wikipedia.org/wiki/Dale–Chall_readability_formula)
 
