@@ -23,14 +23,13 @@
     ".*",
     "*.log",
     "*.md",
+    "*.txt",
     "build/",
     "components/",
     "coverage/",
     "node_modules/",
     "test.js",
-    "benchmark.js",
     "component.json",
-    "package.json",
-    "data/buzzwords.txt"
+    "package.json"
   ]
 }

@@ -1,14 +1,13 @@
 .*
 *.log
+*.txt
 build/
 bower_components/
 components/
 coverage/
 node_modules/
-test.js
-benchmark.js
 bower.json
 component.json
+test.js
 History.md
-Supported-words.md
-data/buzzwords.txt
+Support.md

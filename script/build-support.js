@@ -14,7 +14,7 @@ words = require('../data/dale-chall.json');
  * Write.
  */
 
-fs.writeFileSync('Supported-words.md',
+fs.writeFileSync('Support.md',
     'Supported Words\n' +
     '=================\n' +
     '\n' +
