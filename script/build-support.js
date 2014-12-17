@@ -1,7 +1,18 @@
 'use strict';
 
-var fs = require('fs'),
-    words = require('../data/dale-chall.json');
+/*
+ * Dependencies.
+ */
+
+var fs,
+    words;
+
+fs = require('fs');
+words = require('../data/dale-chall.json');
+
+/*
+ * Write.
+ */
 
 fs.writeFileSync('Supported-words.md',
     'Supported Words\n' +

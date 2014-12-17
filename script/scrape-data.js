@@ -1,16 +1,35 @@
 'use strict';
 
-var fs, Scraper, scraper;
+/*
+ * Dependencies.
+ */
+
+var fs,
+    Scraper;
 
 fs = require('fs');
 Scraper = require('scraperjs').DynamicScraper;
+
+/*
+ * Scraper.
+ */
+
+var scraper;
+
 scraper = Scraper.create(
     'http://www.readabilityformulas.com/articles/' +
     'dale-chall-readability-word-list.php'
 );
 
+/**
+ * Scrape.
+ *
+ * @return {Array.<string>}
+ */
 function scrape() {
-    var nodes = Array.prototype.slice.call(
+    var nodes;
+
+    nodes = Array.prototype.slice.call(
         document.querySelectorAll('table table table td')
     );
 
@@ -21,14 +40,18 @@ function scrape() {
     });
 }
 
-function parse(values) {
+/**
+ * Clean.
+ *
+ * @param {Array.<string>} values
+ * @return {Array.<string>}
+ */
+function clean(values) {
     values = values
         .join(' ')
         .trim()
         .split(/\s+/g)
-        .filter(function (value) {
-            return Boolean(value);
-        })
+        .filter(Boolean)
         .map(function (value) {
             return value.toLowerCase();
         });
@@ -38,8 +61,17 @@ function parse(values) {
     });
 }
 
+/**
+ * Write.
+ *
+ * @param {Array.<string>} results
+ */
 function save(results) {
-    fs.writeFileSync('data/dale-chall.txt', parse(results).join('\n') + '\n');
+    fs.writeFileSync('data/dale-chall.txt', clean(results).join('\n') + '\n');
 }
+
+/*
+ * Start scraping.
+ */
 
 scraper.scrape(scrape, save);
