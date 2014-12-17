@@ -47,4 +47,4 @@ See [Supported-words.md](Supported-words.md).
 
 ## License
 
-MIT © Titus Wormer
+MIT © [Titus Wormer](http://wooorm.com)
