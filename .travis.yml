@@ -1,13 +1,25 @@
 language: node_js
-script: npm run-script test-travis
 node_js:
-- '0.10'
 - '0.11'
-after_script: npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls
+- '0.12'
+- '4.0'
+- '5.0'
+- '6.0'
+after_success: bash <(curl -s https://codecov.io/bash)
 deploy:
-  provider: npm
-  email: tituswormer@gmail.com
-  api_key:
-    secure: MBduBMZjG5EKrtC1bOaaOVmm009NV+9PWoxE+B4GnMsXNsAj7aQLmTH6i3+YFHZPV7cLRahkzMkae8pXuWPM4yj6Yv3ir7g0YXIwDmOrmRyrEjs+JAkq52zi9ZFgljtzwfl62HNI2o/fMX+gbWL+vEhHCzrhLv2EgVXh4j15xJk=
-  on:
-    repo: wooorm/dale-chall
+  - provider: npm
+    email: tituswormer@gmail.com
+    api_key:
+      secure: Q4KsUHBwUgiZNez5y8Vb41YK+8gPzMNt30CwfIDYBhuiClEmTARikAAOmy6H9yD7VMKVFcF5TTu0p2hHrN359O0lFyr06qWmjtIP5dzDGjk4iXKxyRJROPDLJ4d0qznbndrhhpe+skQG8VQcZSrWQP0qNZ0DiLyWs9W0Y3aXtRk=
+    on:
+      tags: true
+      node: '5.0'
+  - provider: releases
+    api_key:
+      secure: bDtXQMK9A3JSeeGFJe7CZdwvvTiPodI0rm9taWwNxdb4cj14q2e+HquTqBLmg3gvOTD7BcbmcUEA1MwdtH5s+IILTZdeaA4hBGicNdB21qg1DB6NNf1J5+TFRDW7asFFKBB/uojeYm9hUqhMRPv6QeG6tbwtW6zwz1n4dCYitIg=
+    file:
+      - "dale-chall.js"
+      - "dale-chall.min.js"
+    on:
+      tags: true
+      node: '6.0'
