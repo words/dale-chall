@@ -2,5 +2,5 @@
 
 <!--lint disable no-multiple-toplevel-headings-->
 
-0.2.2 / 2014-12-17
+1.0.0 / 2016-07-29
 ==================
