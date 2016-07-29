@@ -43,8 +43,8 @@ Yields:
 
 ## Related
 
-*   [dale-chall](https://github.com/wooorm/dale-chall)
-    — List of familiar American-English words (1995);
+*   [buzzwords](https://github.com/wooorm/buzzwords)
+    — List of buzzwords;
 *   [fillers](https://github.com/wooorm/fillers)
     — List of filler words;
 *   [hedges](https://github.com/wooorm/hedges)
