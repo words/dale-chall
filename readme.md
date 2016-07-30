@@ -2,6 +2,8 @@
 
 List of familiar American-English words: [The New Dale-Chall (1995)][wiki].
 
+There’s also a module for the [formula][].
+
 ## Installation
 
 [npm][npm-install]:
@@ -77,3 +79,5 @@ Yields:
 [author]: http://wooorm.com
 
 [wiki]: http://en.wikipedia.org/wiki/Dale–Chall_readability_formula
+
+[formula]: https://github.com/wooorm/dale-chall-formula
