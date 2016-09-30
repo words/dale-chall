@@ -27,7 +27,7 @@
     "remark-cli": "^2.0.0",
     "remark-preset-wooorm": "^1.0.0",
     "scraperjs": "^1.2.0",
-    "tape": "^4.0.0",
+    "tape": "^4.6.1",
     "xo": "^0.16.0"
   },
   "scripts": {
