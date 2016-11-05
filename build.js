@@ -1,14 +1,5 @@
-/**
- * @author Titus Wormer
- * @copyright 2014 Titus Wormer
- * @license MIT
- * @module dale-chall:script
- * @fileoverview Generate a dictionary of entity names to replacements.
- */
-
 'use strict';
 
-/* Dependencies. */
 var fs = require('fs');
 var bail = require('bail');
 var jsdom = require('jsdom');
