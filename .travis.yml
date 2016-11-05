@@ -1,9 +1,8 @@
 language: node_js
 node_js:
 - '4.0'
-- '5.0'
-- '6.0'
-after_success: bash <(curl -s https://codecov.io/bash)
+- '7.0'
+after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   - provider: npm
     email: tituswormer@gmail.com
@@ -11,7 +10,7 @@ deploy:
       secure: Q4KsUHBwUgiZNez5y8Vb41YK+8gPzMNt30CwfIDYBhuiClEmTARikAAOmy6H9yD7VMKVFcF5TTu0p2hHrN359O0lFyr06qWmjtIP5dzDGjk4iXKxyRJROPDLJ4d0qznbndrhhpe+skQG8VQcZSrWQP0qNZ0DiLyWs9W0Y3aXtRk=
     on:
       tags: true
-      node: '5.0'
+      node: '4.0'
   - provider: releases
     api_key:
       secure: bDtXQMK9A3JSeeGFJe7CZdwvvTiPodI0rm9taWwNxdb4cj14q2e+HquTqBLmg3gvOTD7BcbmcUEA1MwdtH5s+IILTZdeaA4hBGicNdB21qg1DB6NNf1J5+TFRDW7asFFKBB/uojeYm9hUqhMRPv6QeG6tbwtW6zwz1n4dCYitIg=
@@ -20,4 +19,4 @@ deploy:
       - "dale-chall.min.js"
     on:
       tags: true
-      node: '6.0'
+      node: '7.0'
