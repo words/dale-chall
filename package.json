@@ -9,15 +9,15 @@
     "word",
     "list"
   ],
-  "files": [
-    "index.js",
-    "index.json"
-  ],
   "repository": "https://github.com/wooorm/dale-chall",
   "bugs": "https://github.com/wooorm/dale-chall/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "main": "index.json",
+  "files": [
+    "index.json"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -33,7 +33,7 @@
   "scripts": {
     "build-md": "remark . --quiet --frail",
     "build-generate": "node script/generate.js",
-    "build-bundle": "browserify index.js --bare -s daleChall > dale-chall.js",
+    "build-bundle": "browserify index.json --bare -s daleChall > dale-chall.js",
     "build-mangle": "esmangle dale-chall.js > dale-chall.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
