@@ -22,7 +22,7 @@
   "dependencies": {},
   "devDependencies": {
     "bail": "^1.0.1",
-    "browserify": "^13.0.1",
+    "browserify": "^14.0.0",
     "esmangle": "^1.0.1",
     "jsdom": "^9.8.3",
     "nyc": "^10.0.0",
