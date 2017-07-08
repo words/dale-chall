@@ -6,7 +6,7 @@ There’s also a module for the [formula][].
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install dale-chall
@@ -17,7 +17,7 @@ npm install dale-chall
 ```js
 var daleChall = require('dale-chall');
 
-daleChall.length; // 2942
+daleChall.length; //=> 2942
 
 console.log(daleChall.slice(0, 10));
 ```
@@ -41,22 +41,22 @@ Yields:
 
 ### `daleChall`
 
-**dale-chall** exposes a list of strings (`Array.<string>`).
+`dale-chall` exposes a list of strings (`Array.<string>`).
 
 ## Related
 
 *   [buzzwords](https://github.com/wooorm/buzzwords)
-    — List of buzzwords;
+    — List of buzzwords
 *   [fillers](https://github.com/wooorm/fillers)
-    — List of filler words;
+    — List of filler words
 *   [hedges](https://github.com/wooorm/hedges)
-    — List of hedge words;
+    — List of hedge words
 *   [profanities](https://github.com/wooorm/profanities)
-    — List of profane words;
+    — List of profane words
 *   [spache](https://github.com/wooorm/spache)
-    — List of simple American-English words (1974);
+    — List of simple American-English words (1974)
 *   [weasels](https://github.com/wooorm/weasels)
-    — List of weasel words.
+    — List of weasel words
 
 ## License
 
@@ -72,7 +72,7 @@ Yields:
 
 [codecov]: https://codecov.io/github/wooorm/dale-chall
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
