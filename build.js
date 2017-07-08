@@ -11,8 +11,7 @@ function done(err, window) {
 
   bail(err);
 
-  values = [].slice.call(window.document.querySelectorAll('table table table td'))
-    .slice(0, -1)
+  values = [].slice.call(window.document.querySelectorAll('.main_container_table_three td'))
     .map(function (node) {
       return node.textContent;
     })
