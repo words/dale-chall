@@ -1,4 +1,4 @@
-# dale-chall [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# dale-chall [![Build Status][travis-badge]][travis]
 
 List of familiar American-English words: [The New Dale-Chall (1995)][wiki].
 
@@ -67,10 +67,6 @@ Yields:
 [travis-badge]: https://img.shields.io/travis/wooorm/dale-chall.svg
 
 [travis]: https://travis-ci.org/wooorm/dale-chall
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/dale-chall.svg
-
-[codecov]: https://codecov.io/github/wooorm/dale-chall
 
 [npm]: https://docs.npmjs.com/cli/install
 
