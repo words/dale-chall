@@ -45,17 +45,17 @@ Yields:
 
 ## Related
 
-*   [buzzwords](https://github.com/wooorm/buzzwords)
+*   [buzzwords](https://github.com/words/buzzwords)
     — List of buzzwords
-*   [fillers](https://github.com/wooorm/fillers)
+*   [fillers](https://github.com/words/fillers)
     — List of filler words
-*   [hedges](https://github.com/wooorm/hedges)
+*   [hedges](https://github.com/words/hedges)
     — List of hedge words
-*   [profanities](https://github.com/wooorm/profanities)
+*   [profanities](https://github.com/words/profanities)
     — List of profane words
-*   [spache](https://github.com/wooorm/spache)
+*   [spache](https://github.com/words/spache)
     — List of simple American-English words (1974)
-*   [weasels](https://github.com/wooorm/weasels)
+*   [weasels](https://github.com/words/weasels)
     — List of weasel words
 
 ## License
