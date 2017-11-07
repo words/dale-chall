@@ -64,9 +64,9 @@ Yields:
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/dale-chall.svg
+[travis-badge]: https://img.shields.io/travis/words/dale-chall.svg
 
-[travis]: https://travis-ci.org/wooorm/dale-chall
+[travis]: https://travis-ci.org/words/dale-chall
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -76,4 +76,4 @@ Yields:
 
 [wiki]: http://en.wikipedia.org/wiki/Dale–Chall_readability_formula
 
-[formula]: https://github.com/wooorm/dale-chall-formula
+[formula]: https://github.com/words/dale-chall-formula

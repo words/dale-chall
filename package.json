@@ -9,8 +9,8 @@
     "word",
     "list"
   ],
-  "repository": "https://github.com/wooorm/dale-chall",
-  "bugs": "https://github.com/wooorm/dale-chall/issues",
+  "repository": "words/dale-chall",
+  "bugs": "https://github.com/words/dale-chall/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
