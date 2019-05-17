@@ -15,11 +15,11 @@ npm install dale-chall
 ## Usage
 
 ```js
-var daleChall = require('dale-chall');
+var daleChall = require('dale-chall')
 
-daleChall.length; //=> 2942
+daleChall.length // => 2942
 
-console.log(daleChall.slice(0, 10));
+console.log(daleChall.slice(0, 10))
 ```
 
 Yields:
