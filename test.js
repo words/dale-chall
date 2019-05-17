@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var daleChall = require('./');
+var daleChall = require('.');
 
 test('characterEntities', function (t) {
   t.equal(typeof daleChall, 'object', 'should be an array #1');
