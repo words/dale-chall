@@ -1,23 +1,15 @@
 language: node_js
-node_js:
-- '4.0'
-- '9.0'
 sudo: false
+node_js:
+  - lts/dubnium
+  - node
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: Q4KsUHBwUgiZNez5y8Vb41YK+8gPzMNt30CwfIDYBhuiClEmTARikAAOmy6H9yD7VMKVFcF5TTu0p2hHrN359O0lFyr06qWmjtIP5dzDGjk4iXKxyRJROPDLJ4d0qznbndrhhpe+skQG8VQcZSrWQP0qNZ0DiLyWs9W0Y3aXtRk=
-    on:
-      tags: true
-      node: '9.0'
-  - provider: releases
-    skip_cleanup: true
-    api_key:
-      secure: bDtXQMK9A3JSeeGFJe7CZdwvvTiPodI0rm9taWwNxdb4cj14q2e+HquTqBLmg3gvOTD7BcbmcUEA1MwdtH5s+IILTZdeaA4hBGicNdB21qg1DB6NNf1J5+TFRDW7asFFKBB/uojeYm9hUqhMRPv6QeG6tbwtW6zwz1n4dCYitIg=
-    file:
-      - "dale-chall.js"
-      - "dale-chall.min.js"
-    on:
-      tags: true
-      node: '9.0'
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: UzYdrbzz7qvU5dF1xSNgo14yX1iZj2o3qoSvtncpMwkewAML9jDZr9cdgiupDJ5DcOLhvD8wpEYIQqqpFhKeDj+Cwz24mX293IBaHOlbwKgPV1ynm9aFBkfDSAk5PMivPemELY/3rT+d8OBFl852Y6D5YvoLSYts/FRqGAPyGBw=
+  file:
+    - 'dale-chall.js'
+    - 'dale-chall.min.js'
+  on:
+    tags: true
