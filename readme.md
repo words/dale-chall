@@ -1,4 +1,8 @@
-# dale-chall [![Build Status][travis-badge]][travis]
+# dale-chall
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 List of familiar American-English words: [The New Dale-Chall (1995)][wiki].
 
@@ -64,9 +68,17 @@ Yields:
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/words/dale-chall.svg
+[build-badge]: https://img.shields.io/travis/words/dale-chall.svg
 
-[travis]: https://travis-ci.org/words/dale-chall
+[build]: https://travis-ci.org/words/dale-chall
+
+[downloads-badge]: https://img.shields.io/npm/dm/dale-chall.svg
+
+[downloads]: https://www.npmjs.com/package/dale-chall
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/dale-chall.svg
+
+[size]: https://bundlephobia.com/result?p=dale-chall
 
 [npm]: https://docs.npmjs.com/cli/install
 
