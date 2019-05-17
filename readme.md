@@ -72,8 +72,8 @@ Yields:
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
-[wiki]: http://en.wikipedia.org/wiki/Dale–Chall_readability_formula
+[wiki]: https://en.wikipedia.org/wiki/Dale–Chall_readability_formula
 
 [formula]: https://github.com/words/dale-chall-formula
