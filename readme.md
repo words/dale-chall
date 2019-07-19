@@ -4,7 +4,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of familiar American-English words: [The New Dale-Chall (1995)][wiki].
+List of easy American-English words: [The New Dale-Chall (1995)][wiki].
 
 There’s also a module for the [formula][].
 
@@ -58,7 +58,7 @@ Yields:
 *   [profanities](https://github.com/words/profanities)
     — List of profane words
 *   [spache](https://github.com/words/spache)
-    — List of simple American-English words (1974)
+    — List of familiar American-English words (1974)
 *   [weasels](https://github.com/words/weasels)
     — List of weasel words
 
