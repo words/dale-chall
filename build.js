@@ -34,7 +34,7 @@ function onconcat(buf) {
     })
     .sort()
     .filter(function(value, index, all) {
-      return all.indexOf(value, index + 1) === -1
+      return !all.includes(value, index + 1)
     })
 
   fs.writeFile('index.json', JSON.stringify(values, 0, 2) + '\n', bail)
