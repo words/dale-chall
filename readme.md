@@ -4,19 +4,19 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of easy American-English words: [The New Dale-Chall (1995)][wiki].
+List of easy American-English words: [the new Dale-Chall (1995)][wiki].
 
 There’s also a module for the [formula][].
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install dale-chall
 ```
 
-## Usage
+## Use
 
 ```js
 var daleChall = require('dale-chall')
@@ -49,17 +49,17 @@ Yields:
 
 ## Related
 
-*   [buzzwords](https://github.com/words/buzzwords)
+*   [`buzzwords`](https://github.com/words/buzzwords)
     — List of buzzwords
-*   [fillers](https://github.com/words/fillers)
+*   [`fillers`](https://github.com/words/fillers)
     — List of filler words
-*   [hedges](https://github.com/words/hedges)
+*   [`hedges`](https://github.com/words/hedges)
     — List of hedge words
-*   [profanities](https://github.com/words/profanities)
+*   [`profanities`](https://github.com/words/profanities)
     — List of profane words
-*   [spache](https://github.com/words/spache)
+*   [`spache`](https://github.com/words/spache)
     — List of familiar American-English words (1974)
-*   [weasels](https://github.com/words/weasels)
+*   [`weasels`](https://github.com/words/weasels)
     — List of weasel words
 
 ## License
