@@ -1,10 +1,12 @@
 import fs from 'fs'
 import https from 'https'
-import bail from 'bail'
+import {bail} from 'bail'
 import concat from 'concat-stream'
 import unified from 'unified'
 import parse from 'rehype-parse'
+// @ts-ignore remove when typed
 import $ from 'hast-util-select'
+// @ts-ignore remove when typed
 import toString from 'hast-util-to-string'
 
 var endpoint =
@@ -12,24 +14,32 @@ var endpoint =
 
 https.get(endpoint, onresponse)
 
+/**
+ * @param {import('http').IncomingMessage} response
+ */
 function onresponse(response) {
   response.pipe(concat(onconcat)).on('error', bail)
 }
 
+/**
+ * @param {Buffer} buf
+ */
 function onconcat(buf) {
   var tree = unified().use(parse).parse(buf)
 
   var values = $.selectAll('.main_container_table_three td', tree)
-    .map((d) => toString(d))
+    .map((/** @type {import('hast').Element} */ d) => toString(d))
     .join(' ')
     .trim()
     .split(/\s+/g)
     .filter(Boolean)
-    .map(function (value) {
-      return value.toLowerCase()
-    })
+    .map((/** @type {string} */ d) => d.toLowerCase())
     .sort()
-    .filter(function (value, index, all) {
+    .filter(function (
+      /** @type {string} */ value,
+      /** @type {number} */ index,
+      /** @type {Array.<string>} */ all
+    ) {
       return all.indexOf(value) === index
     })
 
