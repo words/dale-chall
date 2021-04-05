@@ -14,26 +14,24 @@ var endpoint =
 
 https.get(endpoint, onresponse)
 
-function onresponse(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onresponse(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
 }
 
 function onconcat(buf) {
-  var tree = unified()
-    .use(parse)
-    .parse(buf)
+  var tree = unified().use(parse).parse(buf)
 
   var values = selectAll('.main_container_table_three td', tree)
-    .map(toString)
+    .map((d) => toString(d))
     .join(' ')
     .trim()
     .split(/\s+/g)
     .filter(Boolean)
-    .map(function(value) {
+    .map(function (value) {
       return value.toLowerCase()
     })
     .sort()
-    .filter(function(value, index, all) {
+    .filter(function (value, index, all) {
       return all.indexOf(value) === index
     })
 
