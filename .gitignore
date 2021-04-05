@@ -1,6 +1,5 @@
 .DS_Store
 *.log
+coverage/
 node_modules/
-dale-chall.js
-dale-chall.min.js
 yarn.lock

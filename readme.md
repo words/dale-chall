@@ -11,6 +11,9 @@ There’s also a module for the [formula][].
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -20,7 +23,7 @@ npm install dale-chall
 ## Use
 
 ```js
-var daleChall = require('dale-chall')
+import {daleChall} from 'dale-chall'
 
 daleChall.length // => 2942
 
@@ -43,6 +46,9 @@ Yields:
 ```
 
 ## API
+
+This package exports the following identifiers: `daleChall`.
+There is no default export.
 
 ### `daleChall`
 

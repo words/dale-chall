@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var daleChall = require('.')
+import test from 'tape'
+import {daleChall} from './index.js'
 
 test('characterEntities', function (t) {
   t.equal(typeof daleChall, 'object', 'should be an array #1')
