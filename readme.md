@@ -7,17 +7,54 @@
 
 List of easy American-English words: [new Dale–Chall (1995)][wiki].
 
-There’s also a module for the [formula][].
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`daleChall`](#dalechall)
+*   [Data](#data)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [Security](#security)
+*   [License](#license)
+
+## What is this?
+
+This package exposes a list of pretty useless words, which are typically used
+to fill empty space.
+
+## When should I use this?
+
+Use this when you want to do readability things with natural language.
+
+Use [`dale-chall-formula`][dale-chall-formula] for the formula.
 
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install dale-chall
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {daleChall} from 'https://esm.sh/dale-chall@2'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {daleChall} from 'https://esm.sh/dale-chall@2?bundle'
+</script>
 ```
 
 ## Use
@@ -47,27 +84,43 @@ Yields:
 
 ## API
 
-This package exports the following identifiers: `daleChall`.
+This package exports the identifier `daleChall`.
 There is no default export.
 
 ### `daleChall`
 
-`dale-chall` exposes a list of strings (`Array<string>`).
+List of strings (`Array<string>`).
+
+## Data
+
+See [`readabilityformulas.com`][data].
+
+## Types
+
+This package is fully typed with [TypeScript][].
+It exports no additional types.
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 14.14+ and 16.0+.
+It also works in Deno and modern browsers.
 
 ## Related
 
-*   [`buzzwords`](https://github.com/words/buzzwords)
-    — List of buzzwords
-*   [`fillers`](https://github.com/words/fillers)
-    — List of filler words
-*   [`hedges`](https://github.com/words/hedges)
-    — List of hedge words
-*   [`profanities`](https://github.com/words/profanities)
-    — List of profane words
+*   [`dale-chall-formula`](https://github.com/words/dale-chall-formula)
+    — Formula to detect the grade level of text
 *   [`spache`](https://github.com/words/spache)
-    — List of familiar American-English words (1974)
-*   [`weasels`](https://github.com/words/weasels)
-    — List of weasel words
+    — list of familiar American-English words (1974)
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
+
+## Security
+
+This package is safe.
 
 ## License
 
@@ -93,10 +146,20 @@ There is no default export.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
+
 [license]: license
 
 [author]: https://wooorm.com
 
 [wiki]: https://en.wikipedia.org/wiki/Dale–Chall_readability_formula
 
-[formula]: https://github.com/words/dale-chall-formula
+[dale-chall-formula]: https://github.com/words/dale-chall-formula
+
+[data]: https://www.readabilityformulas.com/articles/dale-chall-readability-word-list.php
