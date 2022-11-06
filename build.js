@@ -24,7 +24,7 @@ const values = selectAll('.main_container_table_three td', tree)
 
 await fs.writeFile(
   'index.js',
-  'export const daleChall = ' +
+  '/**\n * List of easy American-English words: new Dale–Chall (1995).\n */\nexport const daleChall = ' +
     JSON.stringify([...new Set(values)], null, 2) +
     '\n'
 )

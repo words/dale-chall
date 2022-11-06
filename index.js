@@ -1,3 +1,6 @@
+/**
+ * List of easy American-English words: new Dale–Chall (1995).
+ */
 export const daleChall = [
   'a',
   'able',

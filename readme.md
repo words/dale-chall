@@ -5,7 +5,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of easy American-English words: [the new Dale-Chall (1995)][wiki].
+List of easy American-English words: [new Dale–Chall (1995)][wiki].
 
 There’s also a module for the [formula][].
 
