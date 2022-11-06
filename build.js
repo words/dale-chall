@@ -1,49 +1,30 @@
-import fs from 'node:fs'
-import https from 'node:https'
-import {bail} from 'bail'
-import concat from 'concat-stream'
+import fs from 'node:fs/promises'
+import fetch from 'node-fetch'
 import {unified} from 'unified'
 import rehypeParse from 'rehype-parse'
 import {selectAll} from 'hast-util-select'
 import {toString} from 'hast-util-to-string'
 
-const endpoint =
+const response = await fetch(
   'https://www.readabilityformulas.com/articles/dale-chall-readability-word-list.php'
+)
 
-https.get(endpoint, onresponse)
+const body = await response.text()
 
-/**
- * @param {import('http').IncomingMessage} response
- */
-function onresponse(response) {
-  response.pipe(concat(onconcat)).on('error', bail)
-}
+const tree = unified().use(rehypeParse).parse(body)
 
-/**
- * @param {Buffer} buf
- */
-function onconcat(buf) {
-  const tree = unified().use(rehypeParse).parse(buf)
+const values = selectAll('.main_container_table_three td', tree)
+  .map((d) => toString(d))
+  .join(' ')
+  .trim()
+  .toLowerCase()
+  .split(/\s+/g)
+  .filter(Boolean)
+  .sort()
 
-  const values = selectAll('.main_container_table_three td', tree)
-    .map((/** @type {import('hast').Element} */ d) => toString(d))
-    .join(' ')
-    .trim()
-    .split(/\s+/g)
-    .filter(Boolean)
-    .map((/** @type {string} */ d) => d.toLowerCase())
-    .sort()
-    .filter(function (
-      /** @type {string} */ value,
-      /** @type {number} */ index,
-      /** @type {Array.<string>} */ all
-    ) {
-      return all.indexOf(value) === index
-    })
-
-  fs.writeFile(
-    'index.js',
-    'export const daleChall = ' + JSON.stringify(values, null, 2) + '\n',
-    bail
-  )
-}
+await fs.writeFile(
+  'index.js',
+  'export const daleChall = ' +
+    JSON.stringify([...new Set(values)], null, 2) +
+    '\n'
+)
