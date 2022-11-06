@@ -52,7 +52,7 @@ There is no default export.
 
 ### `daleChall`
 
-`dale-chall` exposes a list of strings (`Array.<string>`).
+`dale-chall` exposes a list of strings (`Array<string>`).
 
 ## Related
 
