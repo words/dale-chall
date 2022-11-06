@@ -1,4 +1,4 @@
-export var daleChall = [
+export const daleChall = [
   'a',
   'able',
   'aboard',
