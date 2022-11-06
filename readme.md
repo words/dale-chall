@@ -93,7 +93,7 @@ List of strings (`Array<string>`).
 
 ## Data
 
-See [`readabilityformulas.com`][data].
+See [`countwordsworth.com`][data].
 
 ## Types
 
@@ -162,4 +162,4 @@ This package is safe.
 
 [dale-chall-formula]: https://github.com/words/dale-chall-formula
 
-[data]: https://www.readabilityformulas.com/articles/dale-chall-readability-word-list.php
+[data]: https://countwordsworth.com/download/DaleChallEasyWordList.txt
