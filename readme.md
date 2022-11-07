@@ -25,8 +25,7 @@ List of easy American-English words: [new Dale–Chall (1995)][wiki].
 
 ## What is this?
 
-This package exposes a list of pretty useless words, which are typically used
-to fill empty space.
+This package exposes a list of easy (often understood) words.
 
 ## When should I use this?
 
